@@ -5,97 +5,91 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
   background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #000;
-}
-
-.container {
-  width: 100%;
-  max-width: 420px;
-  padding: 24px;
-}
-
-.profile {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.profile img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 4px solid rgba(255,255,255,0.3);
-  margin-bottom: 12px;
-}
-
-.profile h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.profile p {
-  margin: 4px 0 0;
-  opacity: 0.8;
-}
-
-.links {
-  display: grid;
-  gap: 14px;
-}
-
-.link-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 14px;
-  text-decoration: none;
-  color: #000;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.link-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.2);
-}
-
-.link-card img {
-  width: 48px;
-  height: 48px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.link-text {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.link-text strong {
-  font-size: 16px;
-  color: #000;
+/* Container utama */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
-.link-text span {
-  font-size: 13px;
+/* Layout bio + foto */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Bio kiri */
+.bio {
+  flex: 1;
+}
+
+.bio h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.tagline {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.description {
+  margin-top: 20px;
+  line-height: 1.6;
   opacity: 0.8;
 }
 
-@media (min-width: 768px) {
-  body {
-    padding: 40px;
+/* Foto kanan */
+.profile-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Footer Social */
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column-reverse;
+    text-align: center;
   }
 
-  .container {
-    max-width: 520px;
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bio h1 {
+    font-size: 28px;
   }
 }
