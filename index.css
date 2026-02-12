@@ -27,31 +27,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* kita center */
   gap: 60px;
-}
-
-/* Atur urutan */
-.photo {
-  order: 1;
-}
-
-/* ================= BIO ================= */
-
-.bio {
-  order: 2;
-}
-
-.bio h1 {
-  font-size: 40px;
-  margin-top: 20px;   /* jarak kecil dari gambar */
-  margin-bottom: 15px;
-}
-
-.bio p {
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 500px;
 }
 
 /* ================= PHOTO ================= */
@@ -59,7 +36,9 @@ body {
 .photo {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* supaya gambar & h1 sejajar vertikal */
+  align-items: center;
+  order: 1;
 }
 
 .photo img {
@@ -67,6 +46,26 @@ body {
   max-width: 350px;
   height: auto;
   border-radius: 20px;
+}
+
+/* ================= BIO ================= */
+
+.bio {
+  flex: 1;
+  order: 2;
+}
+
+.bio h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.bio p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 500px;
+  text-align: justify; /* RATA KIRI KANAN */
 }
 
 /* ================= FOOTER ================= */
@@ -113,7 +112,7 @@ footer {
 
 @media (max-width: 768px) {
   .wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
   }
 
@@ -127,9 +126,6 @@ footer {
 
   .bio p {
     max-width: 100%;
-  }
-
-  .bio p {
-  text-align: justify;
+    text-align: justify;
   }
 }
