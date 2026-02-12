@@ -10,7 +10,8 @@ body {
   color: #111;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
+
 .about {
   padding: 60px 20px;
   display: flex;
@@ -26,7 +27,8 @@ body {
   gap: 60px;
 }
 
-/* BIO */
+/* ================= BIO ================= */
+
 .bio {
   flex: 1;
 }
@@ -42,7 +44,8 @@ body {
   max-width: 500px;
 }
 
-/* PHOTO */
+/* ================= PHOTO ================= */
+
 .photo {
   flex: 1;
   display: flex;
@@ -56,26 +59,41 @@ body {
   border-radius: 20px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
-  padding: 30px;
+  padding: 40px 20px;
   text-align: center;
   background: #111;
 }
 
+/* ================= SOCIAL ICONS ================= */
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .social a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  display: inline-block;
 }
 
-.social a:hover {
-  color: #00ff88;
+.social a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* MOBILE */
+.social a img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column-reverse;
@@ -88,5 +106,9 @@ footer {
 
   .bio h1 {
     font-size: 28px;
+  }
+
+  .bio p {
+    max-width: 100%;
   }
 }
