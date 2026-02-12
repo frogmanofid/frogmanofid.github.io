@@ -51,11 +51,17 @@ body {
 }
 
 /* Foto kanan */
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .profile-image img {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 16px;
 }
 
 /* Footer Social */
@@ -81,12 +87,17 @@ body {
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
+    gap: 30px;
   }
 
   .profile-image img {
-    width: 200px;
-    height: 200px;
+    max-width: 220px;
+  }
+
+  .container {
+    padding: 40px 20px;
   }
 
   .bio h1 {
