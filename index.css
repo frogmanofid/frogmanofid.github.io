@@ -73,23 +73,30 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .social a {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  transition: 0.3s ease;
 }
 
 .social a img {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.social a img:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
+.social a:hover {
+  transform: translateY(-4px);
+  background: #222;
 }
 
 /* ================= MOBILE ================= */
