@@ -1,103 +1,89 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  background: #ffffff;
-  color: #000;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: #f5f5f5;
+  color: #111;
 }
 
-/* Container utama */
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
+/* SECTION */
+.about {
   padding: 60px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-/* Layout bio + foto */
-.about-section {
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 }
 
-/* Bio kiri */
+/* BIO */
 .bio {
   flex: 1;
 }
 
 .bio h1 {
-  margin: 0;
-  font-size: 36px;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
-.tagline {
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.description {
-  margin-top: 20px;
+.bio p {
+  font-size: 16px;
   line-height: 1.6;
-  opacity: 0.8;
+  max-width: 500px;
 }
 
-/* Foto kanan */
-.profile-image {
+/* PHOTO */
+.photo {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.profile-image img {
+.photo img {
   width: 100%;
-  max-width: 280px;
+  max-width: 350px;
   height: auto;
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
-/* Footer Social */
-.footer {
+/* FOOTER */
+footer {
+  padding: 30px;
   text-align: center;
-  padding: 20px;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  background: #111;
 }
 
-.footer a {
+.social a {
+  color: white;
   margin: 0 15px;
   text-decoration: none;
-  color: #000;
   font-weight: bold;
-  transition: opacity 0.2s ease;
+  transition: 0.3s;
 }
 
-.footer a:hover {
-  opacity: 0.6;
+.social a:hover {
+  color: #00ff88;
 }
 
-/* Responsive */
+/* MOBILE */
 @media (max-width: 768px) {
-  .about-section {
+  .wrapper {
     flex-direction: column-reverse;
-    align-items: center;
     text-align: center;
-    gap: 30px;
   }
 
-  .profile-image img {
+  .photo img {
     max-width: 220px;
-  }
-
-  .container {
-    padding: 40px 20px;
   }
 
   .bio h1 {
