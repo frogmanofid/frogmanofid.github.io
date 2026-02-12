@@ -31,15 +31,21 @@ body {
   gap: 60px;
 }
 
+/* Atur urutan */
+.photo {
+  order: 1;
+}
+
 /* ================= BIO ================= */
 
 .bio {
-  flex: 1;
+  order: 2;
 }
 
 .bio h1 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-top: 20px;   /* jarak kecil dari gambar */
+  margin-bottom: 15px;
 }
 
 .bio p {
@@ -121,5 +127,9 @@ footer {
 
   .bio p {
     max-width: 100%;
+  }
+
+  .bio p {
+  text-align: justify;
   }
 }
