@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .brainstorm {
   display: flex;
   justify-content: center;
@@ -29,33 +30,34 @@ body {
 
 .brainstorm a {
   display: block;
-  background: linear-gradient(135deg, #111, #333);
-  color: white;
+  background: #111;
+  color: white !important;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 12px;
   text-align: center;
-  text-decoration: none;
-  width: 80%;
+  text-decoration: none !important;
+  width: 85%;
   max-width: 400px;
-  transition: 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
 .brainstorm a span {
+  display: block;
   font-size: 18px;
   font-weight: bold;
-  display: block;
 }
 
 .brainstorm a p {
+  margin-top: 8px;
   font-size: 13px;
   opacity: 0.8;
-  margin-top: 8px;
 }
 
+/* hover effect */
 .brainstorm a:hover {
-  transform: translateY(-5px) scale(1.02);
-  background: linear-gradient(135deg, #222, #555);
+  transform: translateY(-5px);
+  background: #222;
 }
 
 /* ================= SECTION ================= */
